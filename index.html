@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/output.css">
+        <link rel="stylesheet" href="font/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+</head>
+
+<body class=" w-full bg-gray-800 h-[100vh]">
+        <main class=" w-full h-full flex justify-center items-center  ">
+                <ul class="w-[400px] flex flex-wrap bg-white">
+                        <li class="w-full flex flex-wrap overflow-hidden">
+                                <h3 data-on="off"
+                                        class="w-full flex justify-between  cursor-pointer text-[22px] px-4 py-2 font-bold ">
+                                        <i class="bi bi-pencil mr-4"></i>Diseño
+                                        web <i class="bi bi-caret-down hover:text-red-600 "></i>
+                                </h3>
+                                <div class="w-full flex justify-center flex-wrap">
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Photoshop
+                                        </p>
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Html
+                                        </p>
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Css
+                                        </p>
+                                </div>
+
+                        </li>
+                        <li class="w-full flex flex-wrap overflow-hidden">
+                                <h3 data-on="off"
+                                        class="w-full flex justify-between  cursor-pointer text-[22px] px-4 py-2 font-bold ">
+                                        <i class="bi bi-code-slash mr-4"></i>Desarrollo
+                                        front-end <i class="bi bi-caret-down hover:text-red-600 "></i>
+                                </h3>
+                                <div class="w-full flex justify-center flex-wrap">
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Java
+                                                script</p>
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Jquery</p>
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Framework
+                                        </p>
+                                </div>
+
+                        </li>
+                        <li class="w-full flex flex-wrap overflow-hidden">
+                                <h3 data-on="off"
+                                        class="w-full flex justify-between  cursor-pointer text-[22px] px-4 py-2 font-bold ">
+                                        <i class="bi bi-phone mr-4"></i>Diseño
+                                        responsive <i class="bi bi-caret-down hover:text-red-600 "></i>
+                                </h3>
+                                <div class="w-full flex justify-center flex-wrap">
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Tablets
+                                        </p>
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Dispositivos mobiles
+                                        </p>
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Otros
+                                                dispositivos</p>
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Tablets
+                                        </p>
+                                </div>
+
+                        </li>
+                        <li class="w-full flex flex-wrap overflow-hidden">
+                                <h3 data-on="off"
+                                        class="w-full flex justify-between  cursor-pointer text-[22px] px-4 py-2 font-bold ">
+                                        <i class="bi bi-globe-americas mr-4"></i>Posicionamiento web <i
+                                                class="bi bi-caret-down hover:text-red-600 "></i>
+                                </h3>
+                                <div class="w-full flex justify-center flex-wrap">
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Google</p>
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Bing
+                                        </p>
+                                        <p
+                                                class="w-full flex justify-center bg-slate-500 cursor-pointer text-[20px] py-2 hover:bg-red-600  border-black border-b-gray-500 ">
+                                                Yahoo
+                                        </p>
+                                </div>
+
+                        </li>
+                </ul>
+        </main>
+
+</body>
+<script>
+        let _ul = document.querySelectorAll('main div')
+        let _h = document.querySelectorAll('main h3')
+        _ul.forEach(val => {
+                val.setAttribute('data-height', val.clientHeight)
+                val.style.height = '0px'
+        });
+
+        _h.forEach((index, s) => {
+                index.addEventListener('click', () => {
+                        let x = index.getAttribute('data-on')
+                        for (let i = 0; i < _h.length; i++) {
+                                if (s == i) {
+                                        let z = index.nextElementSibling.getAttribute('data-height')
+                                        index.nextElementSibling.style.height = z + 'px'
+                                        index.setAttribute('data-on', 'on')
+                                } else {
+                                        _h[i].nextElementSibling.style.height = '0px'
+                                        _h[i].setAttribute('data-on', 'off')
+                                }
+
+                        }
+                        if (x == 'off') {
+
+                        } else {
+                                index.nextElementSibling.style.height = 0
+                                index.setAttribute('data-on', 'off')
+
+                        }
+                })
+        })
+</script>
+
+</html>
